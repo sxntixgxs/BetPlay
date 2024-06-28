@@ -6,8 +6,8 @@ import java.util.HashMap;
 //Para poderlo generalizar, usamos <T> para especificar que recibe algún objeto
 public interface DataManager<T> {
     void agregar(HashMap<Integer,T> data,T entidad);
-    void modificar(HashMap<Integer,T> data,int id);
-    void eliminar(T entidad);
-    void listar(T entidad);
+    void modificar(HashMap<Integer,T> data,T entidad);
+    void eliminar(HashMap<Integer,T> data, T entidad);
+    void listar(HashMap<Integer,T> data);
     void buscar(T entidad);
 }

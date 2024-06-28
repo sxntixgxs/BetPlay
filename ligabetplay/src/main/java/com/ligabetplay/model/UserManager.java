@@ -10,26 +10,24 @@ public interface UserManager extends DataManager<Usuario>{
     }
 
     @Override
-    default void buscar(Usuario entidad) {
+    default static void buscar(Usuario entidad) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'buscar'");
+
     }
 
     @Override
-    default void eliminar(Usuario entidad) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'eliminar'");
+    default void eliminar(HashMap<Integer,Usuario> usuarios, Usuario usuario) {
+        usuarios.remove(usuario.getId());
     }
 
     @Override
-    default void listar(Usuario entidad) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'listar'");
+    default void listar(HashMap<Integer,Usuario> usuarios) {
+        
     }
 
     @Override
-    default void modificar(HashMap<Integer,Usuario> usuarios, int idUsuario) {
-        //...
+    default void modificar(HashMap<Integer,Usuario> usuarios, Usuario usuario) {
+        usuarios.put(usuario.getId(),usuario);//ya se debe pasar el usuario actualizado; se pueden modificar los datos excepto el id entonces funciona!
     }
     
 }
