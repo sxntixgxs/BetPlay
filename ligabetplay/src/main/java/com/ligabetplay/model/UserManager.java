@@ -28,9 +28,8 @@ public interface UserManager extends DataManager<Usuario>{
     }
 
     @Override
-    default void modificar(Usuario entidad) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'modificar'");
+    default void modificar(HashMap<Integer,Usuario> usuarios, int idUsuario) {
+        //...
     }
     
 }
